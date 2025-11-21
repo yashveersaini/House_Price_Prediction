@@ -24,7 +24,8 @@ def predict():
 
     prediction = pipe.predict(input_df)[0]
 
-    return str(round(prediction, 2))
+    return str(round(abs(prediction), 2))
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+
